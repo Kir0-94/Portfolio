@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiril Markovski — Portfolio</title>
+<style>
+  :root {
+    --bg: #454429;
+    --panel: #e6e3dd;
+    --copper: #f0d910;
+    --copper-bright: #ebde6a;
+    --cream: #454429;
+    --muted: #f2ede2;
+    --trace: #4a6650;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+    --sans: 'Inter', -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: #e6e3dd;
+    font-family: var(--sans);
+    line-height: 1.6;
+  }
+
+  header {
+    padding: 80px 24px 60px;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    border-bottom: 1px solid #2a2d22;
+  }
+
+  header .eyebrow {
+    font-family: var(--mono);
+    color: var(--copper);
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  header h1 {
+    font-size: clamp(2.2rem, 6vw, 3.6rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  header p.role {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-family: var(--mono);
+  }
+
+  header .contact {
+    margin-top: 24px;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  header .contact a { color: var(--copper-bright); text-decoration: none; }
+
+  nav {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--muted);
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  nav span.tier-label { color: var(--copper); text-transform: uppercase; letter-spacing: 0.1em; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 0 24px 100px; }
+
+  .section-label {
+    font-family: var(--mono);
+    color: var(--copper);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin: 70px 0 24px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2a2d22;
+  }
+
+  .project {
+    background: var(--panel);
+    border: 1px solid #262a1e;
+    border-radius: 6px;
+    padding: 32px;
+    margin-bottom: 24px;
+    position: relative;
+  }
+
+  .project.featured { border-left: 3px solid var(--copper); }
+
+  .project h2 {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+    color: var(--cream);
+  }
+
+  .project .tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--trace);
+    background: rgba(74,102,80,0.15);
+    border: 1px solid var(--trace);
+    border-radius: 3px;
+    padding: 2px 8px;
+    margin-bottom: 16px;
+  }
+
+  .project p { color: #454429; margin-bottom: 16px; }
+
+  .gallery {
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50%;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .gallery img {
+    width: 24%;
+    height: 24%;
+    flex-grow:1;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    background: #22261b;
+    border: 1px solid #2a2d22;
+  }
+
+  .gallery source {
+    width: 24%;
+    height: 24%;
+    flex-grow:1;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    background: #22261b;
+    border: 1px solid #2a2d22;
+  }
+
+  .vid {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  video {
+   border-radius: 4px;
+   border: 1px solid #2a2d22;
+  }
+
+  footer {
+    text-align: center;
+    padding: 40px 24px;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    border-top: 1px solid #2a2d22;
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 50px 20px 40px; }
+    .project { padding: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">// Portfolio // </div>
+  <h1>Kiril Markovski</h1>
+  <p class="role">Mechatronics Student — Mechanical Design, Electronics & Embedded Systems</p>
+  <div class="contact">
+    kmarkovski2945@gmail.com &nbsp;·&nbsp; +45 66773485 &nbsp;·&nbsp; Sønderborg, Denmark
+  </div>
+</header>
+
+<nav>
+  <span><span class="tier-label">Current work</span> — SDU Vikings, Robotics Club, Semester Projects, Internship</span>
+  <span><span class="tier-label">Personal projects</span> — hobby builds & experiments</span>
+</nav>
+
+<main>
+
+  <div class="section-label">01 — Current / Professional Work</div>
+
+  <div class="project featured">
+    <span class="tag">SDU Vikings — Formula Student</span>
+    <h2>Electrical Department: HVD, Strain Gauge Amp, Precharge & Accumulator PCBs</h2>
+    <p>Worked on the university's formula student team's electrical department: designed a new enclosure for the car's High Voltage Disconnect (HVD), designed a strain gauge amplifier for the steering column sensors, revised the Precharge PCB, and I am currently reworking the accumulator's PCBs to improve heat dissipation. All tasks involved CAD - either PCB layout or mechanical design - done in close collaboration with teammates.</p>
+    <div class="gallery">
+      <img src="images/vikings/image73.jpg">
+      <img src="images/vikings/image70.jpg">
+      <img src="images/vikings/image69.jpg">
+      <img src="images/vikings/image66.png">
+      <img src="images/vikings/image67.jpg">
+      <img src="images/vikings/image68.jpg">
+      <img src="images/vikings/image71.jpg">
+      <img src="images/vikings/image72.jpg">
+    </div>
+  </div>
+
+  <div class="project featured">
+    <span class="tag">SDU Robotics Club — Team Lead</span>
+    <h2>Micromouse Division Lead — Main PCB Design and Battery Charging circuit (TI BQ25886)</h2>
+    <p>I was appointed lead of the university robotics club's newly formed micromouse division, managing a team building a maze-solving competition robot from scratch. Along with organizing and leading the team, I designed the micromouse's PCB - mostly integrating pre-made modules, but along with that I built a custom battery charging circuit around the Texas Instruments BQ25886 IC. At the end I hand-soldered the entire PCB. The mouse was then assembled by the mechanical members of the team and it was then handed over to the programming department for testing and developing the algorithm</p>
+    <div class="gallery">
+      <img src="images/robotics/image90.png">
+      <img src="images/robotics/image88.jpeg">
+      <img src="images/robotics/image89.jpeg">
+      <img src="images/robotics/image91.jpeg">
+      <img src="images/robotics/image92.png">
+      <img src="images/robotics/image94.png">
+      <img src="images/robotics/image95.jpeg">
+      <img src="images/robotics/image96.jpeg">
+    </div>
+  </div>
+
+<div class="project featured">
+    <span class="tag">Semester Projects — SDU Mechatronics</span>
+    <h2>Rail Cart / Sun-Tracking Solar Panel / Micromouse</h2>
+    <p>Three group semester projects, one per semester, in each I had a different role: The first semester, I programmed a sensor-driven speed-adjusting rail cart; In the second, I programmed and helped CAD-designe mounts for a sun-tracking solar panel; And in the third, I handled the full mechanical assembly for a competition micromouse, and also helped with the design of the PCB.</p>
+    <div class="gallery">
+      <img src="images/semester/image63.jpeg">
+      <img src="images/semester/image54.jpg">
+      <img src="images/semester/image55.jpg">
+    </div>
+    <div class="gallery">
+      <img src="images/semester/image56.jpg">
+      <img src="images/semester/image57.jpg">
+      <video controls width="39%"><source src="videos/Solar_panel.mp4" type="video/mp4"></video>
+    </div>
+    <div class="gallery">
+      <img src="images/semester/image61.jpg">
+      <img src="images/semester/image59.jpg">
+      <img src="images/semester/image60.jpg">
+    </div>
+    <div class="gallery">
+      <img src="images/semester/image62.jpg">
+      <img src="images/semester/image58.png">
+      <video controls width="26.5%"><source src="videos/Semester_micromouse.mp4" type="video/mp4"></video>
+    </div>
+    <h2>Tethered Tension Control</h2>
+    <p>Fourth semester project we had to build and control a tethered tension system. As a the person who was in charge of the electronics of the project, I designed the logic board, needed amplifiers, PCBs and power converters. A miniature step-down converter based on the TI TPS54625 was developed from scratch and was put on the drone in order to power it through the tether. </p>
+    <div class="gallery">
+      <img src="images/Tethered drone/Picture 1.jpeg">
+      <img src="images/Tethered drone/Picture 2.jpeg">
+      <img src="images/Tethered drone/Picture 3.png">
+    </div>
+    <div class="gallery">
+      <img src="images/Tethered drone/Picture 5.png">
+      <img src="images/Tethered drone/Picture 6.png">
+      <img src="images/Tethered drone/Picture 7.jpeg">
+    </div>
+  </div>
+
+  <div class="project">
+    <span class="tag">Independent Study — Feb–Jun 2025</span>
+    <h2>Bare-Metal Assembly on a PIC16F18076</h2>
+    <p>I set out to learn assembly language from scratch on a PIC16F18076, working directly from datasheets with almost no tutorials available. Progressed from uploading code, to blinking an LED, to using internal timers and interrupts - each step took roughly a month. This was one of the hardest technical challenges I had tackled independently, and I gained a genuinely deep understanding of microcontroller architecture.</p>
+    <div class="gallery">
+      <img src="images/assembly/image63.jpg">
+      <img src="images/assembly/image64.jpg">
+      <img src="images/assembly/image65.jpg">
+    </div>
+  </div>
+
+  <div class="project">
+    <span class="tag">Internship — M2M Services, Bulgaria</span>
+    <h2>PCB Assembly Line & Soldering Lab</h2>
+    <p>Rotated through the full manufacturing process at a security-systems and alarms manufacturer: operating and programming a pick-and-place machine on the assembly line, then hand-soldering THT components in the soldering lab. Also completed an Altium Designer course covering EDA and PCB CAD design during this period.</p>
+    <div class="gallery">
+      <img src="images/internship/image35.jpg">
+      <img src="images/internship/image36.jpg">
+      <img src="images/internship/image37.jpg">
+      <img src="images/internship/image38.jpg">
+      <img src="images/internship/image39.jpg">
+      <img src="images/internship/image40.jpg">
+      <img src="images/internship/image41.jpg">
+    </div>
+  </div>
+
+  
+
+  <div class="section-label">02 — Personal Projects</div>
+
+  <div class="project">
+    <span class="tag">Restoration + Custom Build</span>
+    <h2>Retrofitted Soviet Radio → Bluetooth Speaker</h2>
+    <p>Rescued an undocumented flea-market radio by building a custom Bluetooth speaker inside it from scratch - Bluetooth module, amplifier, the radio's original speaker, and a 5V regulator, all on one board. I later upgraded from AA batteries to a rechargeable Li-ion pack with a BMS and a battery level indicator. This is the first electronics project I ever did and it's where my passion for the craft was born.</p>
+    <div class="gallery">
+      <img src="images/radio/image1.jpg">
+      <img src="images/radio/image2.jpg">
+      <img src="images/radio/image4.jpg">
+      <img src="images/radio/image3.jpg">  
+    </div>
+    <div class="vid">
+      <video controls width="75%">
+      <source src="videos/Bluetooth_Vef206.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="project">
+    <span class="tag">From-Scratch Build</span>
+    <h2>Arduino RC Remote & Boat</h2>
+    <p>I built a universal Arduino-based RC remote (joystick + radio module shield) and, rather than the obvious car, I built a boat instead - foam hull, 3D-printed motor holders and steering fin, and both transmitter and receiver firmware written from scratch.</p>
+    <div class="gallery">
+      <img src="images/boat/image5.jpg">
+      <img src="images/boat/image6.jpg">
+      <img src="images/boat/image7.jpg">
+    </div>
+    <div class="gallery">
+      <img src="images/boat/image8.jpg">
+      <img src="images/boat/image9.jpg">
+      <img src="images/boat/image10.jpg">
+    </div>
+    <div class="vid">
+      <video controls width="30%">
+        <source src="videos/RC_Boat_1.mp4" type="video/mp4">
+      </video>
+      <video controls width="30%">
+        <source src="videos/RC_Boat_2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="project">
+    <span class="tag">Practical / Daily-Use Build</span>
+    <h2>Remote Light Switch</h2>
+    <p>Designed and 3D-printed a housing for a remote-controlled light switch with a manual override button, wired into the junction box above the existing switch. Despite its simplicity, this is one of my most-used and cherished projects to date.</p>
+    <div class="gallery">
+      <img src="images/lightswitch/image17.jpg">
+      <img src="images/lightswitch/image18.jpg">
+      <img src="images/lightswitch/image19.jpg">
+    </div>
+    <div class="gallery">
+      <img src="images/lightswitch/image21.jpg">
+      <img src="images/lightswitch/image22.jpg">
+      <video controls width="22.5%"><source src="videos/Light_Switch_2.mp4" type="video/mp4"></video>
+    </div>
+  </div>
+
+  <div class="project">
+    <span class="tag">Time-Boxed Challenge — 1 Week</span>
+    <h2>Mini Arcade Guessing Game</h2>
+    <p>Here I self-imposed a one-week deadline to take a project from idea to a finished, enclosed device - including programming, 3D-printed housing design, and final assembly. The final product is a small arcade guessing game.</p>
+    <div class="gallery">
+      <img src="images/arcade/image23.jpg">
+      <img src="images/arcade/image25.jpg">
+      <img src="images/arcade/image26.jpg">
+    </div>
+<div class="gallery">
+    <img src="images/arcade/image24.jpg">
+    <video controls width="29.5%"><source src="videos/Mini_Arcade_Game.mp4" type="video/mp4"></video>
+    </div>
+  </div>
+
+  <div class="project">
+    <span class="tag">Discrete-Component Design</span>
+    <h2>Light-Sensitive Siren (No Microcontroller)</h2>
+    <p>Built for a school open-house demo: a light-reactive alarm built entirely from discrete components (LDR, transistor amplifier, relay, 555 astable multivibrator) in a clear acrylic box to show the inner workings - deliberately avoiding a microcontroller to demonstrate fundamentals.</p>
+    <div class="gallery">
+      <img src="images/siren/image27.jpg">
+      <img src="images/siren/image29.jpg">
+      <img src="images/siren/image30.jpg">
+    </div>
+    <div class="gallery">
+      <img src="images/siren/image28.jpg">
+      <video controls width="29.5%"><source src="videos/Light_Sensitive_Siren.mp4" type="video/mp4"></video>
+    </div>
+  </div>
+
+  <div class="project">
+    <span class="tag">Trade School Thesis Project</span>
+    <h2>Discrete-Logic Temperature Control System</h2>
+    <p>Final project for vocational secondary education (with accompanying 30-page thesis): a device that monitors and regulates the temperature of a container, with overheat protection and heating-element obstruction detection - built without a microcontroller. Because the working schematic is quite simple, I made a flashy housing box with acrylic panels and a fancy control board with an analog tempreture gauge.</p>
+    <div class="gallery">
+      <img src="images/tempcontrol/image47.jpg">
+      <img src="images/tempcontrol/image48.jpg">
+      <img src="images/tempcontrol/image49.jpg">
+      <img src="images/tempcontrol/image53.png">
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  I learned a little HTML and CSS while making this :) (Yes, Claude helped) (No, it didnt make the entire thing)
+</footer>
+
+</body>
+</html>
